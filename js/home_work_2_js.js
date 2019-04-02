@@ -59,11 +59,14 @@ console.log("4------------------");
 
 //Пользователь вводит число, создать массив заданного размера, вывести элементы массива в обратном порядке
 
-let num = prompt("Введите число");
-let arr5 = [];
-for (let i=0; i<num; i++){
-    arr5[i] = 90;
+let num = prompt('введите число');
+let arr15 = [];
+let n = 1;
+while (n <= num) {
+    arr15.push(n++);
 }
+arr = arr15.reverse();
+console.log(arr);
 
 console.log("4.2------------------");
 
