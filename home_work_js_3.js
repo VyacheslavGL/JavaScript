@@ -75,9 +75,9 @@ function goods(num = 'товар') {
 }
 
 function tovar(num3) {
-    if(num3 === 1 || num3 === 21 || num3 % 10 == 1){
+    if(num3 % 10 == 1 && num3% 100 != 11){
         console.log(num3 +' '+ goods());
-    }else if(num3 % 10 == 5 || num3 % 10 == 6 || num3 % 10 == 7 || num3 % 10 == 8 || num3 % 10 == 9 || num3 % 10 == 0){
+    }else if(num3 % 10 == 5 || num3 % 10 == 6 || num3 % 10 == 7 || num3 % 10 == 8 || num3 % 10 == 9 || num3 % 10 == 0 || num3 % 100 == 11){
         console.log(num3 +' '+ goods()+'ов');
     }else if(num3 % 10 == 2 ||  num3 % 10 == 3 || num3 % 10 == 4){
         console.log(num3 +' '+ goods()+'а');
@@ -86,7 +86,7 @@ function tovar(num3) {
     }
 }
 
-tovar(266448);
+tovar(11111);
 
 
 
