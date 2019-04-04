@@ -7,12 +7,17 @@ function getArrSum(Arr1, Arr2) {
     if(!Array.isArray(Arr1) && !Array.isArray(Arr2) ){
         console.log("Это не массивы");
         return;
-    }else if(Arr1.length === Arr2.length){
+    }else if(Arr1.length !== Arr2.length){
+        console.log("Они не равны ");return;
+    }
+    else if(Arr1.length === Arr2.length){
         console.log("Они равны по длине");
         for(i=0; i<Arr1.length && i<Arr2.length; i++){
             if(Arr1[i] === Arr2[i]){
                 console.log([i]+' \'Элемент arrSum\''+Arr1[i]+' = '+[i]+' \'Элемент arrSum2\''+ Arr2[i]);
                 // return;
+            }else{
+                return false;
             }
         }
     }
@@ -30,11 +35,12 @@ function num(n) {
         return n;
         }
         else {
-            return n % 10 + num(n / 10);
+        return n % 10 + num(Math.floor(n / 10));
         }
     }
 
-console.log(parseInt(num(565)));
+console.log(parseInt(num(123)));
+// console.log(Math.round(num(123)));
 
 
 console.log('3---------------');
@@ -81,5 +87,8 @@ function tovar(num3) {
 }
 
 tovar(30);
+
+
+
 
 
