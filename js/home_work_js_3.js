@@ -39,7 +39,7 @@ function num(n) {
         }
     }
 
-console.log(parseInt(num(123)));
+console.log(parseInt(num(575)));
 // console.log(Math.round(num(123)));
 
 
@@ -71,22 +71,24 @@ console.log('4---------------');
 //4.Считать, что слово «товар» нужно в форме («12 товаров», но «22 товара» и тд).
 
 function goods(num = 'товар') {
-            return num;
-    }
+    return num;
+}
 
 function tovar(num3) {
-    if(num3 === 1 || num3 === 21){
+    if(num3 % 10 == 1 && num3% 100 != 11){
         console.log(num3 +' '+ goods());
-    }else if((5 <num3 && num3<20) || (25<=num3 && num3<=29)){
+    }else if((num3 % 10 >= 5 && num3 % 10 <= 9) || num3 % 10 === 0 || num3 % 100 === 11){
         console.log(num3 +' '+ goods()+'ов');
-    }else if(22 <num3 && num3<24){
+    }else if(num3 % 10 === 2 ||  num3 % 10 === 3 || num3 % 10 === 4){
         console.log(num3 +' '+ goods()+'а');
     }else {
         console.log('Вы задали не верное значение!');
     }
 }
 
-tovar(30);
+
+tovar(123);
+
 
 
 
