@@ -39,19 +39,21 @@
     //console.log(goods.piano.price);
 
     function good(object, from, to) {
-        //let array = [];
+        let array = {};
         for (let keys in object) {
+            //console.log(object[keys]);
             //console.log(object[keys]["price"]);
             if(object[keys]["price"] > from && object[keys]["price"] < to){
                 //array.push(object[keys]["title"]);
-                console.log(object[keys]["title"]);
+                // console.log(object[keys]["title"]);
+                 array[keys] = object[keys];
             }
         }
-        //return array;
+        return array;
     }
 
-    //console.log(good(goods, 2000, 3000));
-    good(goods, 2000, 3000);
+    console.log(good(goods, 2000, 3000));
+    //good(goods, 2000, 3000);
 
     //2 Написать функцию addToCart(obj, title, countToCart) {} , где obj - объект,
     // title - название товара, count - количество товара, которое нужно добавить в корзину.
@@ -146,14 +148,14 @@
 
     function namDay(day){
         for (let key in day){
-            //console.log(key);
-            if(key == getWeekDay()){
+            console.log(day.key);
+            if(key === getWeekDay()){
                 console.log('Сегодня: '+ key+' '+day[key]+' день недели!');
             }
         }
     }
-
     namDay(day);
 
+    console.log(getWeekDay());
 
 }());
