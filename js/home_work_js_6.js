@@ -1,5 +1,3 @@
-(function () {
-    'use strict';
 
     //Задание 1
     let goods = {
@@ -131,4 +129,8 @@
 
     tableFull(articles);
 
-}());
+    function myDeleteTable() {
+        document.getElementById("myTable").deleteRow(-1);
+    }
+
+
