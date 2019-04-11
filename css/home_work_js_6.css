@@ -1,0 +1,31 @@
+*{
+    max-width: 960px;
+    height: auto;
+    margin: auto;
+}
+
+.css-list{
+    width: 100%;
+    height: auto;
+    border: 2px dashed aqua;
+    margin: 10px;
+}
+
+.img{
+    max-width: 200px;
+    height: auto;
+}
+
+
+.button{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    height: auto;
+    margin-top: 20px;
+/*border: 1px dashed black;*/
+}
+button{
+    justify-content: flex-end;
+    align-items: center;
+}
