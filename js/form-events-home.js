@@ -1,7 +1,8 @@
 let form = document.forms.lesson;
 
 let colorRadio = form.elements.color;
-console.log(colorRadio[0]);
+console.log(colorRadio);
+colorRadio[0].addEventListener('click', focusOnElement);
 colorRadio[1].addEventListener('click', focusOnElement);
 
 function focusOnElement() {
