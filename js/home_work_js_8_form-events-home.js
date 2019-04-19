@@ -4,7 +4,16 @@ let form = document.forms.lesson;
 
 let colorRadio = form.elements.color;
 console.log(colorRadio);
-colorRadio[0].addEventListener('click', focusOnElement);
+
+for(let i=0; i<colorRadio.length; i++){
+    colorRadio[i].addEventListener('click', focusOnElement);
+}
+
+function focusOnElement(){
+    form.elements.chekbox_fildset.style.background = this.value;
+}
+
+/*colorRadio[0].addEventListener('click', focusOnElement);
 colorRadio[1].addEventListener('click', focusOnElement);
 
 function focusOnElement() {
@@ -13,7 +22,8 @@ function focusOnElement() {
             form.elements.chekbox_fildset.style.background = colorRadio[i].value;
         }
     }
-}
+}*/
+
 
 //"Выбор языка программирования": выводить в консоль значения отмеченных чекбоксов. Пользователь отмечает какой-то чекбокс, его значение выводится в консоль, пользователь отмечает еще один в консоль выводятся значения обоих и тд. Аналогично при отмене выбора.
 
@@ -21,10 +31,10 @@ function focusOnElement() {
 // let checkbox = document.getElementsByName('lang[]');
 let checkbox = form.elements['lang[]'];
 console.log(checkbox);
-checkbox[0].addEventListener('click', getCheckedBoxes);
-checkbox[1].addEventListener('click', getCheckedBoxes);
-checkbox[2].addEventListener('click', getCheckedBoxes);
-checkbox[3].addEventListener('click', getCheckedBoxes);
+
+for (let i=0; i<checkbox.length; i++){
+    checkbox[i].addEventListener('click', getCheckedBoxes)
+}
 
 
 function getCheckedBoxes(){
