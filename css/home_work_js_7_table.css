@@ -1,0 +1,21 @@
+#goods {
+    max-width: 600px;
+    margin: 30px auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+.caption-cell {
+    background-color: greenyellow;
+    color: darkgreen;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.content-cell {
+    background-color: lightgray;
+    color: #333;
+    padding: 10px;
+}
