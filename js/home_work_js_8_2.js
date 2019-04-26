@@ -38,7 +38,11 @@ function createCom(event) {
     divCell2_2.classList.add('divCell2_2');
     divCell2_2.innerText = textareas[0].value;
 
-    divComm.appendChild(divRow);
+    //fieldset.insertBefore(div, comFieldset.firstChild); что бы выводилось в верху над первым коментом
+
+
+    //divComm.appendChild(divRow);
+    divComm.insertBefore(divRow, divComm.firstChild);
     // divComm.appendChild(row);
     // row.appendChild(cell);
     // cell.appendChild(divRow);
